@@ -9,6 +9,10 @@ export const load: PageLoad = async ({ fetch }) => {
 
 	const retentionsResponse = await fetch(retentionApi);
 
+	if (!gamesResponse.ok || !retentionsResponse.ok) {
+		throw new Error('Failed to fetch data');
+	}
+
 	games.set(await gamesResponse.json());
 	retentions.set(await retentionsResponse.json());
 };
