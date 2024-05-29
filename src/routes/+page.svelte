@@ -153,7 +153,7 @@
 	}
 
 	.container {
-		padding: 20px;
+		padding: 48px 16px 16px;
 		max-width: 1200px;
 		width: 100%;
 		margin: 0 auto;
